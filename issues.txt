@@ -1,0 +1,12 @@
+integrity issues:-
+
+Go to the project directory
+
+Remove the node_modules directory: rm -rf node_modules
+
+Remove package-lock.json file: rm package-lock.json
+
+Clear the cache: npm cache clean --force
+
+Run npm install --verbose If after following the above steps still the issue exists then please provide us the output of installation command with --verbose.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
