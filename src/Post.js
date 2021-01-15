@@ -19,7 +19,7 @@ function Post({ profilePic, image,
                 />
                 <div className="post__topInfo">
                     <h3>{username}</h3>
-                    <p>timestamp...</p>
+                    <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@ function Post({ profilePic, image,
             </div>
 
             <div className="post__image">
-                <img src={image} alt="image" />
+                <img src={image} alt="" />
             </div>
 
             <div className="post__options">
