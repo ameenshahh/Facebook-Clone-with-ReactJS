@@ -8,13 +8,17 @@ import ChatIcon from '@material-ui/icons/Chat';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import { useStateValue } from './StateProvider';
 
 function Sidebar() {
+
+    const [{ user }, dispatch] = useStateValue();
+
     return (
         <div className="sidebar">
             <SidebarRow
-                src="https://scontent.fcok10-1.fna.fbcdn.net/v/t1.0-9/44484220_2211069829175743_5472295940108845056_n.jpg?_nc_cat=107&ccb=2&_nc_sid=09cbfe&_nc_ohc=dUZc9WjeaOYAX9IsAqi&_nc_ht=scontent.fcok10-1.fna&oh=a9be58497990d592779192850f5bf672&oe=60266D14"
-                title="Ameen Sha"
+                src={user.photoURL}
+                title={user.displayName}
             />
 
             <SidebarRow
